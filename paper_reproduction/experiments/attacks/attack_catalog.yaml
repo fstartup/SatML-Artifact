@@ -1,0 +1,31 @@
+attacks:
+  - id: ATK01
+    name: goal_hijack
+    category: ASI01
+  - id: ATK02
+    name: tool_misuse
+    category: ASI02
+  - id: ATK03
+    name: identity_privilege_abuse
+    category: ASI03
+  - id: ATK04
+    name: supply_chain_poisoning
+    category: ASI04
+  - id: ATK05
+    name: unexpected_code_execution
+    category: ASI05
+  - id: ATK06
+    name: memory_context_poisoning
+    category: ASI06
+  - id: ATK07
+    name: inter_agent_message_attack
+    category: ASI07
+  - id: ATK08
+    name: cascading_failure
+    category: ASI08
+  - id: ATK09
+    name: human_trust_exploitation
+    category: ASI09
+  - id: ATK10
+    name: rogue_agent_behavior
+    category: ASI10

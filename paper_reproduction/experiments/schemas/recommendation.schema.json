@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scenario B Bounded Recommendation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evidence_conclusion",
+    "analytical_conclusion",
+    "recommendation_type",
+    "recommendation",
+    "decision_authority",
+    "evidence_refs",
+    "uncertainty",
+    "missing_or_conflicting_evidence"
+  ],
+  "properties": {
+    "evidence_conclusion": {"type": "string"},
+    "analytical_conclusion": {"type": "string"},
+    "recommendation_type": {
+      "type": "string",
+      "enum": ["BOUNDED_RECOMMENDATION", "ESCALATE", "INSUFFICIENT"]
+    },
+    "recommendation": {"type": "string"},
+    "decision_authority": {
+      "type": "string",
+      "enum": ["NOT_AUTHORIZED"]
+    },
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "uncertainty": {"type": "array", "items": {"type": "string"}},
+    "missing_or_conflicting_evidence": {"type": "array", "items": {"type": "string"}}
+  }
+}

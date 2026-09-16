@@ -1,0 +1,33 @@
+profiles:
+  P0:
+    name: deterministic
+    topology: deterministic
+    action_authorization: deterministic_rules
+    recovery: scenario_defined
+    evidence: conventional_plus_harness
+  P1:
+    name: broad_access_single_agent
+    topology: single_agent
+    action_authorization: broad_tool_scope
+    recovery: scenario_defined
+    evidence: conventional_plus_harness
+  P2:
+    name: controlled_single_agent
+    topology: single_agent
+    action_authorization: action_level
+    recovery: bounded
+    evidence: execution_evidence_chain
+  P3:
+    name: controlled_multi_agent
+    topology: multi_agent
+    action_authorization: action_level
+    delegation: non_transitive
+    recovery: bounded
+    evidence: agent_evidence_graph
+  P4:
+    name: human_assisted
+    topology: single_or_multi_agent
+    action_authorization: action_level
+    human_gate: scenario_defined
+    recovery: bounded
+    evidence: execution_evidence_chain

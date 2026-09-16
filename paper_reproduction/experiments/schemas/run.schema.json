@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agentic Experiment Run",
+  "type": "object",
+  "required": ["run_id", "experiment_id", "scenario_id", "system_profile_id", "seed", "fingerprint"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "experiment_id": {"type": "string"},
+    "scenario_id": {"type": "string"},
+    "system_profile_id": {"type": "string"},
+    "seed": {"type": "integer"},
+    "fingerprint": {"type": "object"},
+    "status": {"type": "string"},
+    "started_at": {"type": "string", "format": "date-time"},
+    "completed_at": {"type": ["string", "null"], "format": "date-time"}
+  }
+}

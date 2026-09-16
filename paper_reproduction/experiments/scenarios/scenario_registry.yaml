@@ -1,0 +1,26 @@
+scenarios:
+  A:
+    name: customer_support
+    impact: low
+    consequential_actions: [ticket_update]
+    prohibited_actions: [refund, account_change]
+  B:
+    name: lending_decision_support
+    impact: high
+    consequential_actions: []
+    prohibited_actions: [approve_credit, deny_credit, change_terms, release_funds]
+  C:
+    name: software_development
+    impact: high
+    consequential_actions: [commit, pull_request]
+    prohibited_actions: [unbounded_production_shell, unrestricted_production_deploy]
+  D:
+    name: multi_agent_research
+    impact: moderate
+    consequential_actions: []
+    prohibited_actions: [authority_inheritance, uncontrolled_delegation]
+  E:
+    name: production_operations
+    impact: critical
+    consequential_actions: [bounded_restart, bounded_scale, verified_rollback, feature_flag_change]
+    prohibited_actions: [delete_production_data, unrestricted_shell, unrestricted_iam_change]

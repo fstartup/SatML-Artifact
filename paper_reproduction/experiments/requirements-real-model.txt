@@ -1,0 +1,7 @@
+# Pin exact versions before confirmatory runs.
+openai>=1.0
+anthropic>=0.40
+jsonschema>=4.0
+pytest>=8.0
+
+# Microsoft Foundry Claude uses AnthropicFoundry from the anthropic SDK.

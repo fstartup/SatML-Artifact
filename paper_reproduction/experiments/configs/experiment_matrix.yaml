@@ -1,0 +1,23 @@
+version: "0.1"
+seeds:
+  pilot_count: 30
+  strategy: deterministic_sequence
+scenarios: [A, B, C, D, E]
+profiles:
+  A: [P0, P1, P2, P4]
+  B: [P0, P1, P2, P4]
+  C: [P0, P1, P2, P4]
+  D: [P1, P2, P3, P4]
+  E: [P0, P1, P2, P4]
+conditions: [normal, attack, fault, attack_fault]
+primary_outcomes:
+  - safe_task_success
+  - unsafe_action_rate
+  - harmful_action_rate
+  - control_effectiveness
+  - blast_radius_exposure
+  - recovery_success_rate
+  - evidence_reconstruction_accuracy
+  - delegation_escalation_rate
+  - correlated_failure_exposure
+  - successful_task_cost

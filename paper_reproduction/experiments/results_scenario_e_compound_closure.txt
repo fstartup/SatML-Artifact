@@ -1,0 +1,67 @@
+{
+  "harness_version": "E-COMPOUND-01",
+  "synthetic_only": true,
+  "case_count": 3,
+  "results": [
+    {
+      "case_id": "C1",
+      "faults": [
+        "F4",
+        "F5"
+      ],
+      "name": "recovery_failure_plus_retry_exhaustion",
+      "expected_outcome": "ESCALATE",
+      "executed": true,
+      "follow_on_execution_blocked": true,
+      "authority_expanded": false,
+      "requires_reconciliation": true,
+      "reasons": [
+        "initial_action_bounded",
+        "recovery_failed",
+        "retry_budget_exhausted",
+        "additional_retry_blocked",
+        "authority_not_expanded"
+      ]
+    },
+    {
+      "case_id": "C2",
+      "faults": [
+        "F3",
+        "F6"
+      ],
+      "name": "verification_loss_plus_concurrent_change",
+      "expected_outcome": "ESCALATE",
+      "executed": true,
+      "follow_on_execution_blocked": true,
+      "authority_expanded": false,
+      "requires_reconciliation": true,
+      "reasons": [
+        "action_executed",
+        "post_action_verification_unavailable",
+        "concurrent_state_change_invalidates_follow_on_preconditions",
+        "follow_on_execution_blocked",
+        "fresh_reconciliation_required"
+      ]
+    },
+    {
+      "case_id": "C3",
+      "faults": [
+        "F8",
+        "F7"
+      ],
+      "name": "ambiguous_execution_plus_control_plane_degradation",
+      "expected_outcome": "FAIL_CLOSED",
+      "executed": true,
+      "follow_on_execution_blocked": true,
+      "authority_expanded": false,
+      "requires_reconciliation": true,
+      "reasons": [
+        "execution_outcome_unknown",
+        "control_plane_unavailable",
+        "blind_retry_blocked",
+        "fail_closed",
+        "state_reconciliation_required"
+      ]
+    }
+  ]
+}

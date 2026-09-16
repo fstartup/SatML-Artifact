@@ -1,0 +1,21 @@
+faults:
+  - id: F01
+    name: tool_timeout
+  - id: F02
+    name: partial_tool_success
+  - id: F03
+    name: stale_state
+  - id: F04
+    name: telemetry_loss
+  - id: F05
+    name: authorization_service_unavailable
+  - id: F06
+    name: concurrent_human_change
+  - id: F07
+    name: rollback_failure
+  - id: F08
+    name: dependency_outage
+  - id: F09
+    name: retry_storm
+  - id: F10
+    name: evaluator_input_corruption

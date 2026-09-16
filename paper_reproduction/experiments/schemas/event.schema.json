@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agentic Experiment Event",
+  "type": "object",
+  "required": ["run_id", "event_id", "event_type", "timestamp"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "event_id": {"type": "string"},
+    "event_type": {"type": "string"},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "actor_id": {"type": ["string", "null"]},
+    "action_id": {"type": ["string", "null"]},
+    "resource_id": {"type": ["string", "null"]},
+    "purpose": {"type": ["string", "null"]},
+    "policy_version": {"type": ["string", "null"]},
+    "authorization_id": {"type": ["string", "null"]},
+    "decision": {"type": ["string", "null"]},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "payload_hash": {"type": ["string", "null"]},
+    "metadata": {"type": "object"}
+  }
+}
